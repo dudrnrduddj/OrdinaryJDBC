@@ -262,7 +262,7 @@ public class LibraryView {
 		int choice = scanner.nextInt();
 		return choice;
 	}
-
+	
 	public void displayCustomerList(List<Customer> list) {
 		for(Customer li : list) {
 			System.out.println(li.toString());
@@ -322,8 +322,17 @@ public class LibraryView {
 	}
 
 	public int inputBookNo() {
-		System.out.println("책 번호 입력 : ");
-		return scanner.nextInt();
+		int bookNo = 0;
+		while(true) {
+			System.out.println("책 번호 입력 : ");
+			bookNo = scanner.nextInt();
+			if(bookNo > 0 && bookNo <= 4) {
+				System.out.println("1~4를 제외한 수를 입력해주세요.");
+			}else {
+				break;
+			}
+		}
+		return bookNo;
 	}
 
 	public Book inputBook() {
