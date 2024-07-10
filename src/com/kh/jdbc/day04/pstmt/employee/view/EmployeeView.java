@@ -6,8 +6,6 @@ import java.util.Scanner;
 import com.kh.jdbc.day04.pstmt.employee.controller.EmployeeController;
 import com.kh.jdbc.day04.pstmt.employee.model.vo.Employee;
 
-import oracle.net.aso.l;
-
 public class EmployeeView {
 	EmployeeController empController = null;
 
